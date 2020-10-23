@@ -1,6 +1,6 @@
 # Faraday::Patron
 
-[![Gem Version](https://badge.fury.io/rb/faraday-http.svg)](https://rubygems.org/gems/faraday-http)
+[![Gem Version](https://badge.fury.io/rb/faraday-patron.svg)](https://rubygems.org/gems/faraday-patron)
 [![GitHub Actions CI](https://github.com/julik/faraday-patron/workflows/CI/badge.svg)](https://github.com/julik/faraday-patron/actions?query=workflow%3ACI)
 
 This gem is a [Faraday][faraday] adapter for the [http.rb gem][http-gem].
