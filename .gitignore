@@ -1,0 +1,21 @@
+## PROJECT::GENERAL
+coverage
+rdoc
+doc
+log
+pkg/*
+tmp
+.rvmrc
+.ruby-version
+.yardoc
+.rspec_status
+
+## BUNDLER
+*.gem
+.bundle
+Gemfile.lock
+vendor/bundle
+
+## IDEs
+.idea/
+.yardoc/
