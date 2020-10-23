@@ -64,21 +64,6 @@ module Faraday
         raise Faraday::ConnectionFailed, e
       end
 
-      if loaded? && defined?(::Patron::Request::VALID_ACTIONS)
-        # HAX: helps but doesn't work completely
-        # https://github.com/toland/patron/issues/34
-        ::Patron::Request::VALID_ACTIONS.tap do |actions|
-          if actions[0].is_a?(Symbol)
-            actions << :patch unless actions.include? :patch
-            actions << :options unless actions.include? :options
-          else
-            # Patron 0.4.20 and up
-            actions << 'PATCH' unless actions.include? 'PATCH'
-            actions << 'OPTIONS' unless actions.include? 'OPTIONS'
-          end
-        end
-      end
-
       def configure_ssl(session, ssl)
         if ssl.fetch(:verify, true)
           session.cacert = ssl[:ca_file]
