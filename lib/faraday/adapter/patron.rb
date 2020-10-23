@@ -4,7 +4,7 @@ module Faraday
   class Adapter
     
     # Patron adapter.
-    class Patron < Faraday::Adapter
+    class Patron < ::Faraday::Adapter
       dependency 'patron'
 
       def build_connection(env)

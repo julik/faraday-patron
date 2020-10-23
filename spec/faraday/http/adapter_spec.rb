@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'spec_helper'
 
 RSpec.describe Faraday::Adapter::Patron do
   features :request_body_on_query_methods, :reason_phrase_parse, :trace_method, :connect_method,
@@ -7,7 +8,7 @@ RSpec.describe Faraday::Adapter::Patron do
   it_behaves_like 'an adapter'
 
   # SSL options setting
-  let(:adapter) { 'HTTP' }
+  let(:adapter) { 'Patron' }
 
   let(:conn_options) { { headers: { 'X-Faraday-Adapter' => adapter } } }
 
