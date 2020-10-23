@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/faraday-patron.svg)](https://rubygems.org/gems/faraday-patron)
 [![GitHub Actions CI](https://github.com/julik/faraday-patron/workflows/CI/badge.svg)](https://github.com/julik/faraday-patron/actions?query=workflow%3ACI)
 
-This gem is a [Faraday][faraday] adapter for the [http.rb gem][http-gem].
+This gem is a [Faraday][faraday] adapter for the [patron gem][patron-gem].
 
 ## Installation
 
@@ -28,7 +28,7 @@ Configure your Faraday connection to use this adapter instead of the default one
 ```ruby
 connection = Faraday.new(url, conn_options) do |conn|
   # Your other middleware goes here...
-  conn.adapter :http
+  conn.adapter :patron
 end
 ```
 
@@ -66,6 +66,6 @@ chat rooms and mailing lists is expected to follow the [code of conduct].
 [covenant]:         http://contributor-covenant.org
 [faraday]:          https://github.com/lostisland/faraday
 [faraday-website]:  https://lostisland.github.io/faraday
-[http-gem]:         https://github.com/httprb/http
+[patron-gem]:       https://github.com/toland/patron
 [mit-license]:      https://opensource.org/licenses/MIT
 [rubygems.org]:     https://rubygems.org
